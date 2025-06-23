@@ -46,7 +46,7 @@ This will:
 
 The scraper extracts the following information for the product:
 
-```json
+```
 {
     "name": String,
     "price": Double,
