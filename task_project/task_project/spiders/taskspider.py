@@ -50,11 +50,11 @@ class PlaywrightSpider(scrapy.Spider):
         price = product_article_details.get('variations', {}).get('1274171085', {}).get('whitePriceValue', 'No price found')
         color = product_article_details.get('variations', {}).get('1274171085', {}).get('name', 'No color found')
         variations = product_article_details.get('variations', {})
-        available_colors = []
+        available_colors = set()
 
         for product in variations.values():
             if 'name' in product:
-                available_colors.append(product['name'])
+                available_colors.add(product['name'])
 
         # Reviews data comes from an intercepted response
         reviews_data = self.intercepted_data[0]['body']
