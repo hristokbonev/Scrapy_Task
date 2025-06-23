@@ -34,7 +34,7 @@ Navigate to the project directory and run:
 
 ```bash
 cd task_project
-scrapy crawl taskspider -o output.json
+scrapy crawl task_spider -o output.json
 ```
 
 This will:
