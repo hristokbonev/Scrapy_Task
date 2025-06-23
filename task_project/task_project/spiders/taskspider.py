@@ -2,6 +2,7 @@ import scrapy
 from scrapy_playwright.page import PageMethod
 import json
 
+
 class PlaywrightSpider(scrapy.Spider):
     name = "hm_spider"
     allowed_domains = ["www2.hm.com"]
@@ -20,7 +21,8 @@ class PlaywrightSpider(scrapy.Spider):
                 "playwright_page_methods": [
                     PageMethod("on", "response", self.handle_response),
                     PageMethod("wait_for_selector", "text=КОМЕНТАРИ"),
-                    PageMethod("click", "text=КОМЕНТАРИ")
+                    PageMethod("click", "text=КОМЕНТАРИ"),
+                    PageMethod("wait_for_timeout", 2000),
                     ]
             },
             callback=self.parse,
@@ -59,7 +61,6 @@ class PlaywrightSpider(scrapy.Spider):
         reviews_data = json.loads(reviews_data)
         reviews_count = reviews_data.get('reviews', [])[0].get('catalogItems', [])[0].get('ratingCount', 0)
         reviews_score = reviews_data.get('reviews', [])[0].get('catalogItems', [])[0].get('averageRating', 0)
-
 
 
         yield {
