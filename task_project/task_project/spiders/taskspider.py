@@ -4,7 +4,7 @@ import json
 
 
 class PlaywrightSpider(scrapy.Spider):
-    name = "hm_spider"
+    name = "taskspider"
     allowed_domains = ["www2.hm.com"]
     intercepted_data = []
 
