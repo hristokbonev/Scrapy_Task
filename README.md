@@ -16,11 +16,11 @@ A Scrapy-based web scraper that extracts a product information from H&M's websit
 
 ## Installation
 
-1. **Clone the repository:**
+1. **Clone the repository**
 
-2. **Create and activate a virtual environment:**
+2. **Create and activate a virtual environment**
 
-3. **Install dependencies:**
+3. **Install dependencies**
 
 4. **Install Playwright browsers:**
    ```bash
