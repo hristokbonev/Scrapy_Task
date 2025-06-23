@@ -56,6 +56,8 @@ class PlaywrightSpider(scrapy.Spider):
             if 'name' in product:
                 available_colors.add(product['name'])
 
+        available_colors = sorted(available_colors)
+        
         # Reviews data comes from an intercepted response
         reviews_data = self.intercepted_data[0]['body']
         reviews_data = json.loads(reviews_data)
