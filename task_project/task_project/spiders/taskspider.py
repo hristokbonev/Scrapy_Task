@@ -33,7 +33,7 @@ class PlaywrightSpider(scrapy.Spider):
       H&M's website loads reviews data as a separate request
     '''
     async def handle_response(self, response):
-        if "reviews" in response.url.lower():
+        if "reviews?text" in response.url.lower():
             body = await response.text()
             self.intercepted_data.append({
                 'body': body,
