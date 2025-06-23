@@ -11,7 +11,6 @@ A Scrapy-based web scraper that extracts a product information from H&M's websit
 ## Requirements
 
 - Python 3.7+
-- Playwright browser (automatically installed)
 - All dependencies listed in `requirements.txt`
 
 ## Installation
